@@ -1,15 +1,16 @@
-header {
-    width: 100%;
+.header {
+    position: relative;     /* Establece el contexto para usar position absolute */
+    height: 80px;           /* Altura del header (podés ajustarlo) */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(184, 167, 167);
+    align-items: center;    /* Centra verticalmente los elementos */
+    padding: 0 20px;        /* Espacio interno en los costados */
+    box-sizing: border-box; /* Controla que padding no agregue ancho */
+    background-color: rgb(153, 141, 141); 
 }
 
-header div p {
-    margin-left: 10px;
-}
-
-header h1 {
-    margin: 0 auto;
+.titulo {
+    position: absolute;    /* Lo saca del flujo y lo centra respecto al header */
+    left: 50%;
+    transform: translateX(-50%); /* Lo centra perfectamente */
+    margin: 0;             /* Sacá márgenes para evitar desajustes */
 }
